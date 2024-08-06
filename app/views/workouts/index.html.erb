@@ -5,7 +5,7 @@
   <div>
     <ul class="mt-4 space-y-4">
       <% @workouts.each_with_index do |workout, i| %>
-      <li class="bg-green-100 p-2 rounded-md"><%= i + 1, class: "text-green-500" %>. <%= workout.name %></li>
+      <li class="bg-green-100 p-2 rounded-md"><%= i + 1%>. <%= workout.name %></li>
 
       <% end %>
     </ul>
