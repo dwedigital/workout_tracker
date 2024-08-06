@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center h-screen">
+  <div>
+  <h1><%= @workout.name %></h1>
+  <p><%= @workout.description %></p>
+  </div>
+
+  <div class="absolute inset-x-0 bottom-0 h-16">
+  <%= link_to 'Edit Workout', edit_workout_path(@workout) %> |
+  <%= link_to 'Back to Workouts', workouts_path %> | 
+  <%= link_to 'Delete Workout', workout_path(@workout), data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
+
+  </div>
+
+</div>

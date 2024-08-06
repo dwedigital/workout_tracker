@@ -1,11 +1,12 @@
 <div class="flex flex-col items-center w-full">
+<p><%= link_to "New Workout", new_workout_path, class: "bg-orange-300 p-2" %></p>
   
   <h1 class="text-2xl font-bold mb-4 bg-orange-300 p-2">Workouts</h1>
   
   <div>
     <ul class="mt-4 space-y-4">
       <% @workouts.each_with_index do |workout, i| %>
-      <li class="bg-green-100 p-2 rounded-md"><%= i + 1%>. <%= workout.name %></li>
+      <li class="bg-green-100 p-2 rounded-md"><%= i + 1%>. <%= link_to workout.name, workout_path(workout), class: "text-blue-500" %></li>
 
       <% end %>
     </ul>
